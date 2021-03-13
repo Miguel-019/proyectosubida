@@ -1,2 +1,15 @@
 <h1>Aplicación de Rutas</h1>
 
+<div class="m-4">
+    <input type="text" placeholder="nombre" class="form-control" #inputNombre>
+    <button class="btn btn-primary" [routerLink]="['/uno',inputNombre.value]" routerLinkActive="router-link-active">Componente uno</button>
+    <input type="text" placeholder="apellido" class="form-control" #inputApellido>
+    <button class="btn btn-primary" (click)="parametroDosCDos(inputApellido.value)" >Componente dos</button>
+</div>
+<div class="m-4">
+    <input type="text" placeholder="nombre" class="form-control" #inputNombre2>
+    <button class="btn btn-primary" (click)="parametro(inputNombre2.value,'uno')">Componente uno</button>
+    <input type="text" placeholder="apellido" class="form-control" #inputApellido2>
+    <button class="btn btn-primary" (click)="parametro(inputApellido2.value,'dos')" >Componente dos</button>
+</div>
+

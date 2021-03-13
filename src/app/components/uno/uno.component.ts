@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-uno',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnoComponent implements OnInit {
 
-  constructor() { }
+  nombre:string = "";
+
+  constructor(private rutaActiva:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.nombre =  this.rutaActiva.snapshot.params.nombre;
+
   }
 
 }

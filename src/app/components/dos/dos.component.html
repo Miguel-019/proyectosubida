@@ -1,1 +1,8 @@
-<p>dos works!</p>
+<h2>Componente dos</h2>
+<div *ngIf="apellido.length > 3; else noCumple">
+    <p>El apellido es  {{apellido}}</p>
+</div>    
+<div #noCumple>
+    <p>El apellido no es suficientemete grande</p>
+</div>
+

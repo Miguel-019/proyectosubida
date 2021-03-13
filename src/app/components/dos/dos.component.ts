@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dos',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DosComponent implements OnInit {
 
-  constructor() { }
+
+  apellido:string = "";
+
+
+  constructor(private rutaActiva:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.apellido =  this.rutaActiva.snapshot.params.apellido;
+
   }
+
+
 
 }
